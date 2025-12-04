@@ -6,6 +6,8 @@ import Image from "next/image"
 import { useCart } from "@/lib/cart-context"
 import { fadeIn, slideUp } from "@/lib/motion-variants"
 import Link from "next/link"
+import { useParams } from "next/navigation"
+
 
 interface ProductDetailPageProps {
   params: { slug: string }
@@ -62,10 +64,12 @@ const productData: Record<string, any> = {
 }
 
 export default function ProductDetailPage({ params }: ProductDetailPageProps) {
-  const product = productData[params.slug]
+  const { slug } = useParams();               
+  const product = productData[slug as string];
   const [quantity, setQuantity] = useState(1)
   const [selectedImage, setSelectedImage] = useState(0)
   const { addItem } = useCart()
+  
 
   if (!product) {
     return (

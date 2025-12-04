@@ -11,8 +11,12 @@ import { slideDown } from "@/lib/motion-variants"
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
-  const { theme, toggleTheme } = useTheme()
+  const { theme, setTheme } = useTheme()
   const { itemCount } = useCart()
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light")
+  }
 
   useEffect(() => {
     const handleScroll = () => {

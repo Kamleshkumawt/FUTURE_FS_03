@@ -20,7 +20,7 @@ export function Footer() {
             <p className="text-subtle text-sm leading-relaxed">
               Leading organic juice innovation in Bangalore. 100% organic, cold-pressed, zero preservatives.
             </p>
-            <div className="flex gap-4 mt-4">
+            {/* <div className="flex gap-4 mt-4">
               {["twitter", "instagram", "facebook"].map((social) => (
                 <a
                   key={social}
@@ -31,7 +31,27 @@ export function Footer() {
                   {social[0].toUpperCase()}
                 </a>
               ))}
+            </div> */}
+            <div className="flex gap-4 mt-4 dark:text-gray-200 text-gray-900">
+          <a href="https://github.com/Kamleshkumawt" target="_blank" rel="noopener noreferrer" className="group hover:scale-110 transition-transform duration-200">
+            <div className="flex flex-col items-center">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" className="h-10 w-10 rounded-full bg-gray-500 p-2 dark:shadow-[0_0_25px_hsl(var(--primary)/0.5)]  " />
+              <span className="text-xs  mt-1">GitHub</span>
             </div>
+          </a>
+          <a href="https://www.linkedin.com/in/kamlesh-kumawat-598988330/" target="_blank" rel="noopener noreferrer" className="group hover:scale-110 transition-transform duration-200">
+            <div className="flex flex-col items-center">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" className="h-10 w-10 rounded-full bg-blue-700 p-2 dark:shadow-[0_0_25px_hsl(var(--primary)/0.5)]  " />
+              <span className="text-xs mt-1">LinkedIn</span>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/kamleshkumawat68" target="_blank" rel="noopener noreferrer" className="group hover:scale-110 transition-transform duration-200">
+            <div className="flex flex-col items-center">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" className="h-10 w-10 rounded-full bg-pink-500 p-2 dark:shadow-[0_0_25px_hsl(var(--primary)/0.5)] " />
+              <span className="text-xs mt-1">Instagram</span>
+            </div>
+          </a>
+        </div>
           </motion.div>
 
           {/* Quick Links */}
